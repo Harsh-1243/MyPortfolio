@@ -50,11 +50,11 @@ export const personalInfo = {
 
   // TODO: add your GitHub profile URL — the GitHub button/icon appears
   // automatically once this is filled in.
-  github: "",
+  github: "https://github.com/Harsh-1243",
 
   // TODO: point this at your resume PDF, e.g. "/harsh-panchal-resume.pdf"
   // placed inside the /public folder.
-  resumeUrl: "/public/harsh_panchal_FullStack_CV.pdf",
+  resumeUrl: "harsh_panchal_FullStack_CV.pdf",
 
   // TODO: drop your avatar images inside /public and point these to the
   // file names, e.g. avatarSrc: "/avatar-hero.png". Leave as null to use
