@@ -13,10 +13,11 @@ import {
   SiExpress,
   SiMysql,
   SiPostgresql,
+  SiMongodb,
   SiGit,
   SiGithub,
   SiPostman,
-//   SiOpenai,
+  SiCursor,
   SiSocketdotio,
 } from "react-icons/si";
 import { Server, Bot, Sparkles, Globe } from "lucide-react";
@@ -63,7 +64,7 @@ export const personalInfo = {
   avatarAltSrc: null,
 
   summary:
-    "I build scalable, high-performance web applications with React.js, Node.js, Express.js and MySQL — from admin dashboards to real-time systems. I care about clean architecture, responsive UI, and shipping things that actually work in production.",
+    "I build scalable, high-performance web applications with React.js, Node.js, Express.js and MySQL and MongoDB — from admin dashboards to real-time systems. I care about clean architecture, responsive UI, and shipping things that actually work in production.",
 
   aboutParagraph1:
     "I'm a full stack developer currently building scalable web applications at NovaHex Solution, working across the whole stack — from crafting responsive React interfaces to designing RESTful APIs and managing MySQL-backed services.",
@@ -123,10 +124,18 @@ export const skillCategories = [
     ],
   },
   {
+    title: "Payments",
+    items: [
+      { name: "Razorpay", icon: Globe },
+      { name: "Payment Gateway Integration", icon: Globe },
+    ],
+  },
+  {
     title: "Databases",
     items: [
       { name: "MySQL", icon: SiMysql },
       { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "MongoDB", icon: SiMongodb },
     ],
   },
   {
@@ -144,15 +153,18 @@ export const skillCategories = [
       { name: "ChatGPT", icon: Bot },
       { name: "GitHub Copilot", icon: Bot },
       { name: "Claude", icon: Sparkles },
+      { name: "Cursor AI", icon: SiCursor },
+      { name: "OpenAI Codex", icon: Bot },
     ],
   },
   {
-    title: "Other",
-    items: [
-      { name: "Socket.IO", icon: SiSocketdotio },
-      { name: "REST APIs", icon: Globe },
-    ],
-  },
+  title: "Other",
+  items: [
+    { name: "Socket.IO", icon: SiSocketdotio },
+    { name: "REST APIs", icon: Globe },
+    { name: "Razorpay Integration", icon: Globe },
+  ],
+},
 ];
 
 export const projects = [
@@ -203,7 +215,7 @@ export const experience = [
     company: "NovaHex Solution",
     period: "Apr 2025 — Present",
     bullets: [
-      "Build scalable, high-performance web apps with React.js, Node.js, Express.js and MySQL.",
+      "Build scalable, high-performance web apps with React.js, Node.js, Express.js and MySQL,PostgreSql and MongoDB",
       "Develop responsive, reusable UI components and RESTful APIs with clean, maintainable code.",
       "Collaborate with cross-functional teams to improve usability and optimize performance.",
     ],

@@ -15,9 +15,9 @@ export default function Skills() {
               <div className="h-full rounded-xl border border-white/10 bg-ink-800/60 p-6 transition-colors hover:border-blue-400/30">
                 <div className="mb-5 flex items-center justify-between">
                   <h3 className="font-mono text-sm font-semibold text-paper">{cat.title}</h3>
-                  <span className="rounded-full border border-white/10 px-2 py-0.5 font-mono text-[10px] text-muted">
+                  {/* <span className="rounded-full border border-white/10 px-2 py-0.5 font-mono text-[10px] text-muted">
                     {String(cat.items.length).padStart(2, "0")}
-                  </span>
+                  </span> */}
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {cat.items.map((item) => {

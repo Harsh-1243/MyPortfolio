@@ -1,17 +1,20 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowDown, Mail, Phone, Send } from "lucide-react";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+
 // import { ArrowDown, Mail, Phone, Linkedin, GitHub, Send } from "lucide-react";
 import { personalInfo, socialLinks, heroBadges } from "../data/portfolioData";
 import { useTypewriter } from "../hooks/useTypewriter";
 import Avatar from "./ui/Avatar";
 import Reveal from "./ui/Reveal";
+import HeroImg from "../assets/images/heroimage.png";
 
 const ICONS = {
   mail: Mail,
   phone: Phone,
-//   linkedin: Linkedin,
-//   github: GitHub,
+    linkedin: FaLinkedinIn,
+    github: FaGithub,
 };
 export default function Hero() {
   const typed = useTypewriter(personalInfo.rolesTyped, { pause: 1600 });
@@ -115,27 +118,25 @@ export default function Hero() {
                 );
               })} */}
               {socialLinks.map((s) => {
-  const Icon = ICONS[s.icon];
+                const Icon = ICONS[s.icon];
 
-  console.log(s.icon, Icon);
-
-  return (
-    <a
-      key={s.label}
-      href={s.href}
-      target="_blank"
-      rel="noreferrer"
-      className="flex h-10 w-10 items-center justify-center rounded-md border border-white/10"
-    >
-      {Icon ? <Icon size={16} /> : s.label}
-    </a>
-  );
-})}
+                return (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-md border border-white/10"
+                  >
+                    {Icon ? <Icon size={16} /> : s.label}
+                  </a>
+                );
+              })}
             </div>
           </Reveal>
         </div>
 
-        <Reveal delay={0.2} className="relative mx-auto w-full max-w-sm">
+        <Reveal delay={0.2} className="relative mx-auto w-full ">
           <div
             ref={cardRef}
             onMouseMove={handleMouseMove}
@@ -144,11 +145,12 @@ export default function Hero() {
           >
             <motion.div
               style={{ rotateX, rotateY }}
-              className="relative aspect-[4/5] w-full rounded-2xl border border-white/10 bg-ink-800 shadow-glow"
+              className="relative aspect-[5/5] overflow-hidden w-full rounded-2xl border border-white/10  shadow-glow"
             >
               <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-blue-400/40 via-transparent to-blue-600/30 opacity-40" />
-              <div className="absolute inset-[3px] overflow-hidden rounded-[15px]">
-                <Avatar src={personalInfo.avatarSrc} />
+              <div className="absolute inset-[3px] rounded-[15px]">
+                {/* <Avatar src={personalInfo.avatarSrc} /> */}
+                <img src={HeroImg} alt="HeroImg" className="" />
               </div>
             </motion.div>
 
